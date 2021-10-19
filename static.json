@@ -3,10 +3,15 @@
     "/*/": {
       "Content-Type": "text/plain; charset=UTF-8",
       "Access-Control-Allow-Origin": "*"
+    },
+    "/fetch/": {
+      "Content-Type": "text/html; charset=UTF-8"
     }
   },
   "routes": {
     "/login/": "index.html",
-    "/sample/": "multiply.html"
+    "/sample/": "multiply.html",
+    "/promise/": "promise.html",
+    "/fetch/": "fetch.html"
   }
 }

@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <input id="inp"/>
+        <button id = "bt" onclick="processFetch()">button</button>
+        <script>
+            function processFetch() {
+                const inputElement = document.querySelector('input');
+                const text = inputElement.value;
+                
+                fetch(text).then(result => inputElement.value = result.text());
+            }
+        </script>
+    </body>
+</html>
