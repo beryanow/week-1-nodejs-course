@@ -6,8 +6,9 @@
             function processFetch() {
                 const inputElement = document.querySelector('input');
                 const text = inputElement.value;
-                
-                fetch(text).then(result => inputElement.value = result.text());
+
+                const result = await fetch(text);
+                inputElement.value = result.text();
             }
         </script>
     </body>
