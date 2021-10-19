@@ -1,15 +1,15 @@
 <html>
-    <body>
-        <input type="text" id="inp"/>
-        <button id = "bt" onclick="processFetch()">Press The Button</button>
-        <script>
-            function processFetch() {
-                const inputElement = document.querySelector('#inp');
-                const text = inputElement.value;
+    <script>
+        function processFetch() {
+            const inputElement = document.querySelector('#inp');
+            const text = inputElement.value;
 
-                const result = await fetch(text);
-                inputElement.value = await result.text();
-            }
-        </script>
+            fetch(text).then(result => result.text())
+                       .then(result => inputElement.value = result);
+        }
+    </script>
+    <body>
+        <input id="inp"/>
+        <button id = "bt" onclick="processFetch()">button</button>
     </body>
 </html>
